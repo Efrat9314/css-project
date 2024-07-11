@@ -1,0 +1,257 @@
+﻿html {
+    font-size: 25px;
+    font-family: 'Segoe UI';
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    direction: rtl;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 2fr 3fr 3fr 3fr 3fr;
+    grid-template-rows: 17vh 76vh 7vh;
+}
+
+.header {
+    grid-column: span 5;
+    width: 100%;
+    height: 17vh;
+    background-color: #ec8080;
+    z-index: 1;
+    position: fixed;
+}
+
+
+.header--inner {
+    display: flex;
+}
+
+
+.nav {
+    margin-top: 0;
+    margin-left: auto;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.__nav_link {
+    display: inline-block;
+    padding: .5rem .75rem;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-top: 5%;
+}
+
+.nav > a {
+    color: #fbefef;
+}
+
+.logo {
+    width: 17vh;
+    height: auto;
+}
+
+.aside {
+    grid-column: 1;
+    grid-row: 2;
+    position: fixed;
+    margin-top: 17vh;
+    height: 68.8vh;
+    width: 14.4%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .aside > a {
+        color: #df3636;
+        margin-bottom: 0.8px;
+        height: 100px;
+        text-align: center;
+        background-color: #ebebeb0d;
+        text-decoration-line: none;
+        justify-content: center;
+    }
+
+    .aside :hover {
+        background-color: #ecb0b036
+    }
+
+.main {
+    grid-column: 2/6;
+    grid-row: 2;
+    display: inline-block;
+}
+
+.openPicture {
+    width: 90%;
+    height: auto;
+    margin-bottom: 0px;
+    top: -37vh;
+    position: fixed;
+}
+
+.aboutPicture {
+    width: 100%;
+    height: 80vh;
+    opacity: 50%;
+}
+
+.connectionPicture {
+    width: 30vw;
+    height: 40vw;
+}
+/*.connectionPicture {
+      width: 26.8%;
+      height:85%;
+}*/
+.picture_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+}
+
+.connectionContainer {
+    display: flex;
+}
+
+
+    .connectionContainer > form {
+        width: 60vw;
+        height: 40vw;
+        background-color: #f3aac212;
+        direction: ltr;
+        text-align: center;
+    }
+
+        .connectionContainer > form > fieldset {
+            border: none;
+        }
+
+input[type=submit] {
+    background-color: #ffffff96;
+    width: 120px;
+    height: 60px;
+    border: 2px solid #fde9e9;
+    border-radius: 3%;
+    color: #ab3d63;
+}
+
+    input[type=submit]:hover {
+        background-color: #fcf1f5cc;
+    }
+
+p > input {
+    font-size: 1rem;
+    color: #ec8080;
+    background-color: transparent;
+    border-color: #ec8080;
+}
+
+p > label {
+    font-size: 1.2rem;
+    color: #ab3d63;
+    font-weight: 400;
+}
+
+h1 {
+    color: #d62360;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+h2 {
+    color: #ab3d63;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.picture_container > img {
+    grid-column: span 1;
+    grid-row: span 1;
+    width: 95%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.footer {
+    grid-column: span 5;
+    grid-row: 3;
+    position: fixed;
+    height: 7vh;
+    width: 100%;
+    bottom: 0px;
+    font-size: 1.3rem;
+    background-image: linear-gradient( to left,beige,darksalmon,beige);
+    text-align: center;
+    font-family: freestyle script;
+}
+
+    .footer > label {
+        padding-top: 0px;
+        color: white;
+    }
+
+.p {
+    font-size: 70%;
+    color: brown;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-35%, -60%);
+}
+
+    .p label {
+        font-size: 140%;
+        color: brown;
+    }
+
+@media(max-height:750px) {
+
+    .p {
+        transform: translate(-50%,-20%);
+    }
+}
+
+@media(max-width:1700px) {
+
+    .openPicture {
+        top: -20vh;
+    }
+}
+
+@media(max-width:1400px) {
+
+    .openPicture {
+        top: 1vw;
+    }
+}
+
+@media(max-width:1000px) {
+
+    html {
+        font-size: 22px;
+    }
+
+    .openPicture {
+        top: 0px;
+    }
+}
+
+@media(max-width:750px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    .openPicture {
+        top: 30px;
+    }
+}
